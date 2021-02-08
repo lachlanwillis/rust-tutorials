@@ -1,0 +1,26 @@
+fn main() {
+  // {} will be replaced with arguments automatically
+  println!("{} days", 31);
+
+  println!("{0}, this is {1}. {1}, this is {0}", "alice", "bob");
+
+  println!("{subject} {verb} {object}", object="the lazy dog", subject="the quick brown fox", verb="jumps over");
+
+  println!("{} of {:b} people know binary, the other half don't", 1, 2);
+
+  println!("{number:>width$}", number=1, width=6);
+
+  println!("{number:>0width$}", number=1, width=6);
+
+  println!("My name is {0}, {1} {0}", "Bond", "James");
+
+  #[allow(dead_code)]
+  #[derive(Debug)]
+  struct Structure(i32);
+
+  println!("this struct `{:?}` will print", Structure(3));
+
+  let pi = 3.141592;
+
+  println!("pi is roughly {0:.1$}, with {1} decimal places", pi, 3)
+}
